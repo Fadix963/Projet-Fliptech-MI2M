@@ -1,1 +1,20 @@
+CC = gcc          # le compilateur à utiliser
+CFLAGS = -Wall -Wextra -g  # les options de compilation
 
+SRCS = main.c card.c ...   # tous les fichiers source
+OBJS = $(SRCS:.c=.o)       # remplace .c par .o automatiquement
+
+TARGET = fliptech           # nom de l'exécutable final
+
+all: $(TARGET)             # commande par défaut : construit le jeu
+
+$(TARGET): $(OBJS)         # pour construire fliptech, on a besoin des .o
+    gcc ... -o fliptech    # commande de compilation finale
+
+%.o: %.c                   # règle générique : compile chaque .c en .o
+    gcc -c fichier.c
+
+clean:                     # supprime les fichiers compilés
+    del *.o fliptech.exe
+
+re: clean all              # recompile tout depuis zéro
