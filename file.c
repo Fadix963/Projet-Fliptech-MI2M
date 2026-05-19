@@ -1,24 +1,31 @@
-#ifndef DISPLAY_H
-#define DISPLAY_H
+#include <stdio.h>
+#include "file.h"
 
-#include "game.h"
+// Sauvegarde les scores finaux dans un fichier texte
+void saveScores(Game *game) {
+    FILE *file = fopen("scores.txt", "w");
 
-// Codes couleurs pour le terminal
-#define RESET   "\033[0m"
-#define BOLD    "\033[1m"
-#define RED     "\033[31m"
-#define GREEN   "\033[32m"
-#define YELLOW  "\033[33m"
-#define BLUE    "\033[34m"
-#define MAGENTA "\033[35m"
-#define CYAN    "\033[36m"
-#define WHITE   "\033[37m"
+    // Vérifie si le fichier s'est bien ouvert
+    if (file == NULL) {
+        printf("Erreur : impossible d'ouvrir le fichier scores.txt\n");
+        return;
+    }
 
-// Fonctions d'affichage
-void clearScreen();                                   // Efface l'écran
-void displayTitle();                                  // Affiche le titre du jeu
-void displayGameState(Game *game, int currentPlayer); // Affiche l'état du jeu
-void displayScores(Game *game);                       // Affiche les scores de tous les joueurs
-void displayWinner(Game *game);                       // Affiche le vainqueur
+    // Écriture du titre dans le fichier
+    fprintf(file, "=== SCORES FINAUX - FLIP TECH ===\n\n");
 
-#endif
+    // Écriture des scores de tous les joueurs
+    for (int i = 0; i < game->nbPlayers; i++) {
+        fprintf(file, "%s : %d points\n",
+                game->players[i].name,
+                game->players[i].score);
+    }
+
+    // Écriture du nombre de manches jouées
+    fprintf(file, "\nNombre de manches jouees : %d\n", game->currentRound - 1);
+
+    // Fermeture du fichier
+    fclose(file);
+
+    printf("\nScores sauvegardes dans le fichier scores.txt\n");
+}
