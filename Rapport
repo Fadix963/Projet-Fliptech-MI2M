@@ -1,15 +1,16 @@
 Rapport de Projet : FlipTech
-1. Description de l'équipe et du sujet
+1. Description de l'équipe et du sujet :
 Notre équipe est composée de Fadi, Chady et Ismael, étudiants en préING1 à CY TECH pour l'année 2025-2026. Nous avons travaillé ensemble pour créer une version numérique du jeu de société "Flip 7".
-Le projet consiste à adapter les mécaniques du jeu "Flip 7", un jeu de cartes qui repose sur le hasard, les statistiques et la prise de risque, dans une application console fonctionnelle. L’essentiel du projet est de gérer la pioche, d'afficher les éléments de jeu de façon dynamique, de permettre la saisie utilisateur et de suivre strictement les règles, y compris la gestion des cartes numéros, des cartes bonus et des conditions de fin de manche ou de partie.
-2. Organisation et flux de travail
+Le projet consiste à adapter les mécaniques du jeu "Flip 7", un jeu de cartes qui repose sur le hasard, les statistiques et la prise de risque, dans une application console fonctionnelle. 
+L’essentiel du projet est de gérer la pioche, d'afficher les éléments de jeu de façon dynamique, de permettre la saisie utilisateur et de suivre strictement les règles, y compris la gestion des cartes numéros, des cartes bonus et des conditions de fin de manche ou de partie.
+2. Organisation et flux de travail :
 Pour atteindre les objectifs du cahier des charges, nous avons établi l'organisation suivante :
 Outils de collaboration : Nous avons utilisé GitHub pour le versionnage du code. Pour la gestion de projet et la communication, nous avons choisi Discord.
 Méthodologie : Avant de commencer le codage, nous avons pris le temps de concevoir et de structurer l'application pour éviter de regrouper tout le code dans un seul fichier.
 Développement : Nous avons adopté un processus itératif, en priorisant la stabilité de l'application et la gestion des erreurs plutôt que d'ajouter trop vite des fonctionnalités complexes.
-3. Problèmes rencontrés et solutions apportées
+3. Problèmes rencontrés et solutions apportées :
 Gestion des erreurs : Un des principaux défis a été de garantir que l'application ne s'arrête pas de manière inattendue. Nous avons ajouté des vérifications sur les entrées clavier et géré les exceptions lors de la pioche.
-Interface console : Nous avons rendu l'affichage des cartes et des statistiques pour plusieurs joueurs lisible en utilisant [ex: couleurs/caractères spéciaux] pour différencier les éléments à l'écran.
+Interface console : Nous avons rendu l'affichage des cartes et des statistiques pour plusieurs joueurs lisible en utilisant differentes des couleurs pour différencier les éléments à l'écran.
 Logique de jeu : La gestion de l'état de la pioche, qui commence par un mélange aléatoire et maintient un ordre par la suite, ainsi que le calcul des scores à la fin de chaque manche ont requis une attention particulière pour respecter les règles officielles.
-4. Résultats
-Le projet a abouti à une application stable, permettant de jouer avec autant de joueurs que souhaité. Les fonctionnalités de base, comme la saisie des pseudos, le déroulement des manches, le calcul des scores et l'arrêt de la partie à 200 points, fonctionnent pleinement. Nous avons également [mentionner ici si vous avez ajouté des améliorations facultatives comme l'interface graphique ou les cartes spéciales].
+4. Résultats :
+Le projet a abouti à une application stable, permettant de jouer avec autant de joueurs que souhaité. Les fonctionnalités de base, comme la saisie des pseudos, le déroulement des manches, le calcul des scores et l'arrêt de la partie à 200 points, fonctionnent pleinement. 
